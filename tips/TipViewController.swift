@@ -14,6 +14,7 @@ class TipViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    var totalBill:Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +46,10 @@ class TipViewController: UIViewController {
     }
     
     func updateTip(){
-        let billAmount = NSString(string: billField.text!).doubleValue;
+        let billAmount = NSString(string: billField.text!).doubleValue
         let tip = (tipPercentages[tipControl.selectedSegmentIndex]/100)+1
         tipLabel.text = String(format: "$%.2f", (tip - 1)*billAmount)
+        totalBill = billAmount*tip
         totalLabel.text = String(format: "$%.2f", billAmount*tip)
     }
     @IBAction func onEditingChanged(sender: AnyObject) {
@@ -56,6 +58,18 @@ class TipViewController: UIViewController {
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+    @IBAction func splitBillCalled(sender: AnyObject) {
+        let splitView = SplitView.initWithNibAndTotal("SplitView") as! SplitView
+        splitView.setTotalBill(totalBill)
+        splitView.splitBill()
+        splitView.frame.origin = CGPointMake(0, 736)
+        self.view.addSubview(splitView)
+        UIView.animateWithDuration(0.4, animations: {
+            splitView.frame.origin = CGPointMake(0, 0)
+        })
+        
+        
     }
 
 
