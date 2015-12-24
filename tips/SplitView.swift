@@ -10,8 +10,12 @@ import UIKit
 class SplitView: UIView {
     @IBOutlet weak var splitStepper: UIStepper!
     @IBOutlet weak var stepperLabel: UILabel!
+    @IBOutlet weak var splitTotalLabel: UILabel!
     var splitArray:Array<Double> = []
     var billTotal:Double = 0
+    
+    
+    
     class func willMoveToSuperview(newSuperview: UIView?) {
     }
     func setTotalBill(totalBill:Double){
@@ -21,7 +25,8 @@ class SplitView: UIView {
     func splitBill(){
         let numPeople = splitStepper.value
         let amountOwed = billTotal / numPeople
-        print (amountOwed)
+        splitTotalLabel.text = String(format: "$%.2f", amountOwed)
+
         
     }
     
