@@ -17,6 +17,7 @@
 		55BD4A121C1A986900A47908 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD4A111C1A986900A47908 /* SettingsViewController.swift */; };
 		55E3F3031C2A1265007F381A /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3F3021C2A1265007F381A /* SplitView.swift */; };
 		55E3F3061C2A1677007F381A /* SplitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E3F3041C2A139A007F381A /* SplitView.xib */; };
+		55E3F3081C2B81EF007F381A /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3F3071C2B81EF007F381A /* ThemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		55BD4A111C1A986900A47908 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		55E3F3021C2A1265007F381A /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		55E3F3041C2A139A007F381A /* SplitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitView.xib; sourceTree = "<group>"; };
+		55E3F3071C2B81EF007F381A /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				55BD49E31C1A886200A47908 /* AppDelegate.swift */,
 				55BD49E51C1A886200A47908 /* TipViewController.swift */,
 				55BD49E71C1A886200A47908 /* Main.storyboard */,
+				55E3F3071C2B81EF007F381A /* ThemeViewController.swift */,
 				55E3F3021C2A1265007F381A /* SplitView.swift */,
 				55BD4A111C1A986900A47908 /* SettingsViewController.swift */,
 				55E3F3041C2A139A007F381A /* SplitView.xib */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E3F3081C2B81EF007F381A /* ThemeViewController.swift in Sources */,
 				55BD49E61C1A886200A47908 /* TipViewController.swift in Sources */,
 				55E3F3031C2A1265007F381A /* SplitView.swift in Sources */,
 				55BD49E41C1A886200A47908 /* AppDelegate.swift in Sources */,

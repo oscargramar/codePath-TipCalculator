@@ -22,6 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.setDouble(20.0, forKey: "secondTipPercentage")
             defaults.setDouble(25.0, forKey: "thirdTipPercentage")
         }
+        if(!defaults.boolForKey("themeCustomized")){
+            defaults.setBool(true, forKey: "themeCustomized")
+            defaults.setDouble(172/255.0, forKey: "rValue")
+            defaults.setDouble(172/255.0, forKey: "gValue")
+            defaults.setDouble(172/255.0, forKey: "bValue")
+        }
+        
+        
+        
+        
+        
         
         return true
     }

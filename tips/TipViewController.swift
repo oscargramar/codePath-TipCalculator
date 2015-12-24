@@ -25,6 +25,7 @@ class TipViewController: UIViewController {
         super.viewDidAppear(animated);
         setUpTipArray()
         updateTip()
+        setUpTheme()
         
     }
 
@@ -32,6 +33,15 @@ class TipViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func setUpTheme(){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let redValue = CGFloat(defaults.doubleForKey("rValue"))
+        let greenValue = CGFloat(defaults.doubleForKey("gValue"))
+        let blueValue = CGFloat(defaults.doubleForKey("bValue"))
+        self.view.backgroundColor = UIColor(red:redValue, green:greenValue, blue:blueValue, alpha: 1.0)
+    }
+    
+    
     
     func setUpTipArray(){
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -68,7 +78,13 @@ class TipViewController: UIViewController {
         UIView.animateWithDuration(0.4, animations: {
             splitView.frame.origin = CGPointMake(0, 0)
         })
-        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        for view in self.view.subviews{
+            if(view.isKindOfClass(SplitView)){
+                view.removeFromSuperview();
+            }
+        }
         
     }
 
