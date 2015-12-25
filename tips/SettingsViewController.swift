@@ -26,7 +26,17 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        setStepperValues();
+        setTheme()
+        setStepperValues()
+        
+    }
+    
+    func setTheme(){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let redValue = defaults.doubleForKey("rValue")
+        let greenValue = defaults.doubleForKey("gValue")
+        let blueValue = defaults.doubleForKey("bValue")
+        self.view.backgroundColor = UIColor(red:CGFloat(redValue), green:CGFloat(greenValue), blue:CGFloat(blueValue), alpha: 1.0)
     }
     
     func setStepperValues(){

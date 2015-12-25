@@ -13,11 +13,7 @@ class SplitView: UIView {
     @IBOutlet weak var splitTotalLabel: UILabel!
     var splitArray:Array<Double> = []
     var billTotal:Double = 0
-    
-    
-    
-    class func willMoveToSuperview(newSuperview: UIView?) {
-    }
+
     func setTotalBill(totalBill:Double){
         billTotal = totalBill
     }

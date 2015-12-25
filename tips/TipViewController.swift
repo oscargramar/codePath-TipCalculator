@@ -71,6 +71,7 @@ class TipViewController: UIViewController {
     }
     @IBAction func splitBillCalled(sender: AnyObject) {
         let splitView = SplitView.initWithNibAndTotal("SplitView") as! SplitView
+        splitView.backgroundColor = self.view.backgroundColor
         splitView.setTotalBill(totalBill)
         splitView.splitBill()
         splitView.frame.origin = CGPointMake(0, 736)
